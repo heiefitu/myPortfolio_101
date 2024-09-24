@@ -1,7 +1,9 @@
 /*RESET*/
 * {
-  box-sizing: border-box; /* quand on ajoute des marges ca change pas, a faire tjrs*/
-  margin: 0; /* pour start avec 0 marges*/
+  box-sizing: border-box;
+  /* quand on ajoute des marges ca change pas, a faire tjrs*/
+  margin: 0;
+  /* pour start avec 0 marges*/
   padding: 0;
 }
 
@@ -29,16 +31,19 @@ body {
 }
 
 a {
-  text-decoration: none; /* take away underline (pas souligner les liens)*/
+  text-decoration: none;
+  /* take away underline (pas souligner les liens)*/
   color: #000;
 }
 
 ul {
-  list-style: none; /* pour pas de bullet point*/
+  list-style: none;
+  /* pour pas de bullet point*/
 }
 
 img {
-  max-width: 100%; /* stay contain 100%*/
+  max-width: 100%;
+  /* stay contain 100%*/
 }
 
 .logo {
@@ -53,8 +58,10 @@ img {
 }
 
 .navbar .container {
-  display: flex; /*flex row so they are side by side*/
-  justify-content: space-between; /*so that the blank is between the element*/
+  display: flex;
+  /*flex row so they are side by side*/
+  justify-content: space-between;
+  /*so that the blank is between the element*/
   align-items: center;
 }
 
@@ -67,8 +74,10 @@ img {
   /* doent specify .main-menu so it will affect the desktop version and also the mobile version*/
   padding: 10px 20px;
   display: block;
-  font-weight: 600; /*semi bold*/
-  transition: 0.4s; /*transition for the hover color*/
+  font-weight: 600;
+  /*semi bold*/
+  transition: 0.4s;
+  /*transition for the hover color*/
 }
 
 .navbar ul li a:hover {
@@ -76,8 +85,10 @@ img {
 }
 
 .navbar ul li:last-child a {
-  margin-left: 15px; /* More space between Blog and log In */
+  margin-left: 15px;
+  /* More space between Blog and log In */
 }
+
 /* ------------------------------------------------ */
 /* Hero */
 .hero {
@@ -138,8 +149,10 @@ img {
   padding-top: 40px;
   flex-basis: 60%;
   margin-right: 60px;
-  min-width: 500px; /* Prevent shrinking too much */
-  max-width: 100%; /* Allow full width if needed */
+  min-width: 500px;
+  /* Prevent shrinking too much */
+  max-width: 100%;
+  /* Allow full width if needed */
 }
 
 .about-me .about-me-text {
@@ -165,16 +178,20 @@ img {
 .about-me .about-me-tabs ul li a::after {
   content: "";
   position: absolute;
-  width: 0; /* Start with no line */
+  width: 0;
+  /* Start with no line */
   height: 3px;
-  background-color: var(--first-color); /* Set the line color */
+  background-color: var(--first-color);
+  /* Set the line color */
   left: 0;
-  bottom: -5px; /* Position the line just below the text */
+  bottom: -5px;
+  /* Position the line just below the text */
   transition: width 0.3s ease-out;
 }
 
 .about-me .about-me-tabs ul li a.active-tab::after {
-  width: 100%; /* Full width when active */
+  width: 100%;
+  /* Full width when active */
 }
 
 .about-me .about-me-detail-title {
@@ -183,8 +200,10 @@ img {
 
 .about-me .about-me-detail-list {
   margin-bottom: 10px;
-  min-width: 300px; /* Prevent shrinking too much */
-  max-width: 100%; /* Allow full width if needed */
+  min-width: 300px;
+  /* Prevent shrinking too much */
+  max-width: 100%;
+  /* Allow full width if needed */
 }
 
 .about-me .tab-content {
@@ -193,7 +212,8 @@ img {
   transform: translateY(20px);
   transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out,
     visibility 0s 0.3s;
-  position: absolute; /* Ensure the content is removed from layout when hidden */
+  position: absolute;
+  /* Ensure the content is removed from layout when hidden */
   top: 0;
   left: 0;
   width: 100%;
@@ -203,7 +223,8 @@ img {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-  position: relative; /* When visible, take up space in the layout */
+  position: relative;
+  /* When visible, take up space in the layout */
   transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out,
     visibility 0s;
 }
@@ -234,23 +255,30 @@ img {
   font-size: 0.9rem;
   margin-top: 50px;
 }
+
 .my-services .expertise-grid {
   margin-top: 40px;
 }
 
 .service-icon img {
   display: block;
-  margin: 0 auto; /* Center the icons horizontally */
-  width: 90px; /* Fixed width for all icons */
-  height: 90px; /* Fixed height for all icons */
-  object-fit: contain; /* Ensure icons fit without stretching */
+  margin: 0 auto;
+  /* Center the icons horizontally */
+  width: 90px;
+  /* Fixed width for all icons */
+  height: 90px;
+  /* Fixed height for all icons */
+  object-fit: contain;
+  /* Ensure icons fit without stretching */
 }
 
 .software-icons {
   display: flex;
   flex-direction: row;
-  width: auto; /* Fixed width for all icons */
-  height: 50px; /* Fixed height for all icons */
+  width: auto;
+  /* Fixed width for all icons */
+  height: 50px;
+  /* Fixed height for all icons */
   justify-content: space-evenly;
 }
 
@@ -263,9 +291,11 @@ img {
 /* My work section */
 .my-work {
   background-color: #f45b34;
-  min-height: 100vh; /* Ensures this section takes up the full viewport height */
+  min-height: 100vh;
+  /* Ensures this section takes up the full viewport height */
   display: flex;
-  justify-content: center; /* Centers content vertically */
+  justify-content: center;
+  /* Centers content vertically */
 }
 
 .my-work .my-work-header {
@@ -275,7 +305,8 @@ img {
 
 .my-work .my-work-body {
   display: flex;
-  justify-content: center; /* Centers the button horizontally */
+  justify-content: center;
+  /* Centers the button horizontally */
   height: 100%;
   padding-top: 150px;
 }
@@ -290,7 +321,8 @@ img {
 }
 
 .my-work .btn-special:hover {
-  background-color: #444; /* Add hover effect */
+  background-color: #444;
+  /* Add hover effect */
 }
 
 /* ------------------------------------------------ */
@@ -326,16 +358,20 @@ img {
 }
 
 .footer .link-icon-tab li {
-  list-style: none; /* Ensures no list styles */
+  list-style: none;
+  /* Ensures no list styles */
 }
 
 .footer .link-icon-tab a {
-  font-size: 2rem; /* Adjust size of icons as needed */
-  color: #000; /* Adjust icon color if necessary */
+  font-size: 2rem;
+  /* Adjust size of icons as needed */
+  color: #000;
+  /* Adjust icon color if necessary */
 }
 
 .footer .link-icon-tab a:hover {
-  color: var(--third-color); /* Changes icon color on hover */
+  color: var(--third-color);
+  /* Changes icon color on hover */
 }
 
 /* ################################################ */
@@ -346,25 +382,30 @@ img {
   justify-content: center;
   min-height: 100vh;
 }
+
 .contact .link-icon-tab ul {
   display: flex;
   justify-content: center;
-  padding-top: 150px;
+  padding-top: 15px;
   gap: 40px;
 }
 
 .contact .link-icon-tab li {
-  list-style: none; /* Ensures no list styles */
+  list-style: none;
+  /* Ensures no list styles */
 }
 
 .contact .link-icon-tab a {
-  font-size: 2rem; /* Adjust size of icons as needed */
-  color: #000; /* Adjust icon color if necessary */
+  font-size: 2rem;
+  /* Adjust size of icons as needed */
+  color: #000;
+  /* Adjust icon color if necessary */
   transition: 0.3s;
 }
 
 .contact .link-icon-tab a:hover {
-  color: var(--third-color); /* Changes icon color on hover */
+  color: var(--third-color);
+  /* Changes icon color on hover */
 }
 
 .contact .contact-heading {
@@ -377,12 +418,43 @@ img {
   text-align: center;
 }
 
+.contact .contact-box {
+  display: flex;
+  justify-content: center;
+}
+
 .contact .contact-box form {
   max-width: 650px;
-  display: grid;
-  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
   padding-top: 20px;
   justify-content: center;
+}
+
+.contact .contact-box form input {
+  height: 50px;
+}
+
+.contact .contact-box form textarea {
+  height: 150px;
+}
+
+.contact .contact-box form button {
+  border: none;
+  height: 50px;
+}
+
+.contact .contact-box form input,
+.contact .contact-box form textarea,
+.contact .contact-box form button {
+  padding: 10px 20px;
+  width: 50%;
+  border-radius: 10px;
+  border: none;
+  color: #000;
+  background-color: rgb(220, 220, 220);
+
 }
 
 /* ################################################ */
@@ -394,8 +466,10 @@ img {
 }
 
 .navbar-work .container {
-  display: flex; /*flex row so they are side by side*/
-  justify-content: space-between; /*so that the blank is between the element*/
+  display: flex;
+  /*flex row so they are side by side*/
+  justify-content: space-between;
+  /*so that the blank is between the element*/
   align-items: center;
 }
 
@@ -408,8 +482,10 @@ img {
   /* doent specify .main-menu so it will affect the desktop version and also the mobile version*/
   padding: 10px 20px;
   display: block;
-  font-weight: 600; /*semi bold*/
-  transition: 0.4s; /*transition for the hover color*/
+  font-weight: 600;
+  /*semi bold*/
+  transition: 0.4s;
+  /*transition for the hover color*/
 }
 
 .navbar-work ul li a:hover {
@@ -417,7 +493,8 @@ img {
 }
 
 .navbar-work ul li:last-child a {
-  margin-left: 15px; /* More space between Blog and log In */
+  margin-left: 15px;
+  /* More space between Blog and log In */
 }
 
 /* ------------------------------------------------ */
@@ -432,26 +509,34 @@ img {
   font-weight: 600;
   margin: 30px 0 20px;
 }
+
 /* ################################################ */
 /* ------------------------------------------------ */
 /* Utility classes*/
 .container {
   max-width: 1100px;
-  margin: 0 auto; /* top and bottom 0 but left and right be auto in middle*/
-  padding: 0 30px; /* top and bottom 0 but left and right be 15px*/
+  margin: 0 auto;
+  /* top and bottom 0 but left and right be auto in middle*/
+  padding: 0 30px;
+  /* top and bottom 0 but left and right be 15px*/
 }
 
 .container-sm {
   max-width: 800px;
-  margin: 0 auto; /* top and bottom 0 but left and right be auto in middle*/
-  padding: 0 15px; /* top and bottom 0 but left and right be 15px*/
+  margin: 0 auto;
+  /* top and bottom 0 but left and right be auto in middle*/
+  padding: 0 15px;
+  /* top and bottom 0 but left and right be 15px*/
 }
 
 .container-lg {
   max-width: 1400px;
-  margin: 0 auto; /* top and bottom 0 but left and right be auto in middle*/
-  padding: 0 10px; /* top and bottom 0 but left and right be 15px*/
+  margin: 0 auto;
+  /* top and bottom 0 but left and right be auto in middle*/
+  padding: 0 10px;
+  /* top and bottom 0 but left and right be 15px*/
 }
+
 /* ------------------------------------------------ */
 /* Card */
 .card {
@@ -466,21 +551,26 @@ img {
   text-align: center;
   font-size: 1.2rem;
   line-height: 1.4;
-  min-height: 60px; /* Ensure consistent height for titles */
+  min-height: 60px;
+  /* Ensure consistent height for titles */
 }
 
 .card p {
-  flex-grow: 1; /* Make paragraph take up available space */
-  margin-bottom: 30px; /* Space for Learn More */
+  flex-grow: 1;
+  /* Make paragraph take up available space */
+  margin-bottom: 30px;
+  /* Space for Learn More */
   text-align: center;
   font-size: 1rem;
 }
 
 .card h6 {
-  padding-top: 10px; /* Space for Learn More */
+  padding-top: 10px;
+  /* Space for Learn More */
   text-align: center;
   font-size: 1rem;
 }
+
 /* ------------------------------------------------ */
 /* Buttons */
 .btn {
@@ -512,7 +602,8 @@ img {
 
 .btn-dark {
   background: var(--dark-color);
-  color: #fff; /*color of the text*/
+  color: #fff;
+  /*color of the text*/
 }
 
 .btn-block {
@@ -577,6 +668,7 @@ img {
   font-style: italic;
   margin: 20px 0 10px;
 }
+
 /* ------------------------------------------------ */
 /* Background */
 .bg-primary {
@@ -650,6 +742,7 @@ img {
   font-size: 20px;
   transition: 0.3s;
 }
+
 /* ------------------------------------------------ */
 /* Media Queries*/
 /* allow to add specifics CSS to specifics devices or different ranges of screen sizes*/
@@ -701,7 +794,7 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .footer .footer-grid > div {
+  .footer .footer-grid>div {
     text-align: center;
   }
 
