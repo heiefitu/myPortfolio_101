@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/images/Nom-logo.png" alt="logo" />
+          </a>
+        </div>
+
+        <div class="main-menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="mywork.html">My Work</a></li>
+            <li>
+              <a class="btn" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Hamburger button -->
+        <button class="hamburger-button">
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+        </button>
+        <div class="mobile-menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="mywork.html">My Work</a></li>
+            <li>
+              <a class="btn" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-heading text-xxl">Hi, I'm Heiefitu Taiaapu</h1>
+          <h2 class="hero-subheading text-xl">Aerospace Engineering Student</h2>
+          <p class="hero-text text-md">
+            Passionate about cutting-edge technologies in the aerospace sector,
+            I’m driven by the precision and innovation behind high-performance
+            engineering.
+          </p>
+          <p class="hero-text text-md">
+            Explore my projects, and let’s discover the potential for future
+            collaboration.
+          </p>
+          <div class="hero-buttons">
+            <a
+              href="assets/CV_ENG_TAIAAPU-HEIEFITU.pdf"
+              download
+              class="btn btn-primary btn-special"
+              >My Resume</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about me section -->
+    <section id="about" class="about-me">
+      <div class="container-lg">
+        <!-- class row -->
+        <div class="about-me-content">
+          <!-- class about col-1 -->
+          <div class="about-me-image">
+            <img src="assets/images/moi-sans-bg.png" alt="Profile Image" />
+          </div>
+          <!-- class about col-2 -->
+          <div class="about-me-text-container">
+            <h1 class="about-me-heading text-xxl">About Me</h1>
+            <p class="about-me-text text-md">
+              My journey in aerospace engineering has been driven by a lifelong
+              fascination with technology, especially in the defense sectors. As
+              I’ve progressed through my studies, I’ve developed a strong
+              interest in high-performance engineering, particularly in
+              designing and creating advanced systems like jet fighters and
+              rockets. Looking to the future, I aim to work on projects that
+              push the limits of technology and collaborate with others who
+              share my passion for creating impactful aerospace innovations.
+            </p>
+
+            <div class="about-me-tabs text-icon">
+              <ul>
+                <li>
+                  <a
+                    href="#"
+                    id="skills-tab"
+                    class="active-tab"
+                    onclick="showTab('skills-content'); setActiveTab(this)"
+                    >Skills</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    id="experience-tab"
+                    onclick="showTab('experience-content'); setActiveTab(this)"
+                    >Experience</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    id="education-tab"
+                    onclick="showTab('education-content'); setActiveTab(this)"
+                    >Education</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    id="languages-tab"
+                    onclick="showTab('languages-content'); setActiveTab(this)"
+                    >Languages</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div id="skills-content" class="tab-content active-content">
+              <h3 class="about-me-detail-title">CAD Software</h3>
+              <p class="about-me-detail-list">
+                3DExperience Catia, Autodesk Fusion 360
+              </p>
+              <h3 class="about-me-detail-title">
+                Simulation & Analysis Software
+              </h3>
+              <p class="about-me-detail-list">
+                ANSYS Workbench, ANSYS STK, MATLAB & Simulink, Abaqus Simulia
+              </p>
+              <h3 class="about-me-detail-title">Programming Languages</h3>
+              <p class="about-me-detail-list">Python, VBA, C++, AppleScript</p>
+            </div>
+
+            <div
+              id="experience-content"
+              class="tab-content"
+              style="display: none"
+            >
+              <h3 class="about-me-detail-title">
+                Flight Safety & Security Engineer Intern
+              </h3>
+              <p class="about-me-detail-list">
+                Established a risk management framework by developing an
+                Excel-based application for managing 30+ bowtie diagrams.
+              </p>
+              <h3 class="about-me-detail-title">Airport Operator Intern</h3>
+              <p class="about-me-detail-list">
+                Conducted evaluations of field reports to identify root causes
+                of aviation events and authored detailed RETEX reports.
+              </p>
+            </div>
+
+            <div
+              id="education-content"
+              class="tab-content"
+              style="display: none"
+            >
+              <h3 class="about-me-detail-title">
+                Aerospace Engineering Degree - 2025
+              </h3>
+              <p class="about-me-detail-list">- GPA: 3.6</p>
+              <p class="about-me-detail-list">
+                - Relevant coursework: Computer-Aided Design, Materials
+                Resistance, Composites, Fluid Mechanics, Space Propulsion
+              </p>
+            </div>
+
+            <div
+              id="languages-content"
+              class="tab-content"
+              style="display: none"
+            >
+              <h3 class="about-me-detail-title">French - Native</h3>
+              <p class="about-me-detail-list">
+                Voltaire Certification Score: 851 pts
+              </p>
+              <h3 class="about-me-detail-title">
+                English - Advanced: CEFR Level C1
+              </h3>
+              <p class="about-me-detail-list">
+                TOEIC Certification Score: 950 pts
+              </p>
+              <h3 class="about-me-detail-title">Spanish - Beginner</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- My Services section -->
+    <section id="services" class="my-services">
+      <div class="container">
+        <!-- My Services header -->
+        <div class="my-services-row-1">
+          <h3 class="my-services-heading text-xxl">My Services</h3>
+        </div>
+        <!-- My Services 3 grid services -->
+        <div class="my-services-row-2">
+          <div class="my-services-grid">
+            <div class="card">
+              <div class="service-icon">
+                <img
+                  src="assets/images/my-icon-fusee.png"
+                  alt="3D Modeling Icon"
+                />
+              </div>
+              <h3 class="text-icon">3D Modeling and Prototyping</h3>
+              <p class="text-md">
+                I create precise 3D models and prototypes, turning concepts into
+                tangible designs ready for testing and implementation, ensuring
+                alignment with project specifications and objectives.
+              </p>
+              <h6 class="my-services-learn-more">Learn more</h6>
+            </div>
+            <div class="card">
+              <div class="service-icon">
+                <img
+                  src="assets/images/my-icon02.png"
+                  alt="FEM Analysis Icon"
+                />
+              </div>
+              <h3 class="text-icon">Advanced Finite Element Analysis</h3>
+              <p class="text-md">
+                I can perform detailed Finite Element Method (FEM) analysis on
+                3D models, ensuring structural integrity and performance under
+                various conditions to optimize design outcomes.
+              </p>
+              <h6 class="my-services-learn-more">Learn more</h6>
+            </div>
+            <div class="card">
+              <div class="service-icon">
+                <img
+                  src="assets/images/my-icon03.png"
+                  alt="Fluid Dynamics Icon"
+                />
+              </div>
+              <h3 class="text-icon">Fluid Dynamics Simulation</h3>
+              <p class="text-md">
+                I analyze the behavior of systems and components, providing
+                valuable insights that enhance performance and efficiency in
+                aerospace applications.
+              </p>
+              <h6 class="my-services-learn-more">Learn more</h6>
+            </div>
+          </div>
+        </div>
+        <!-- My Services Software expertise -->
+        <div class="my-services-row-3">
+          <div class="card expertise-grid">
+            <h4 class="text-italic-md">Software Expertise</h4>
+            <div class="software-icons">
+              <!-- Add the icons of the software -->
+              <img src="assets/images/catia-icon.png" alt="CATIA" />
+              <img src="assets/images/ansys-icon.png" alt="ANSYS" />
+              <img src="assets/images/abaqus-icon.png" alt="Simulia" />
+              <img src="assets/images/matlab-icon.png" alt="MATLAB" />
+              <img src="assets/images/fusion360-icon.png" alt="Fusion 360" />
+              <img src="assets/images/stk-icon.png" alt="Fusion 360" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- My Work section -->
+    <section id="work" class="my-work">
+      <div class="container-sm">
+        <div class="my-work-header">
+          <h4 class="text-md">Explore my recent</h4>
+          <h3 class="text-xxl">Work</h3>
+        </div>
+        <div class="my-work-body">
+          <div class="my-work-button">
+            <a href="mywork.html" class="btn btn-dark btn-special">Browse</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer section -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <h4 class="footer-text">For more information</h4>
+          <p class="text-md">
+            Feel free to contact me by clicking on the links below
+          </p>
+          <div class="link-icon-tab">
+            <ul>
+              <li>
+                <a class="link-icon" href="contact.html"
+                  ><i class="fa-solid fa-comment-dots"></i
+                ></a>
+              </li>
+              <li>
+                <a class="link-icon" href="#">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </li>
+              <li>
+                <a class="link-icon" href="#">
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+              </li>
+              <li>
+                <a class="link-icon" href="#">
+                  <i class="fa-brands fa-square-whatsapp"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <p class="footer-copyright">
+            Copyright © 2024 Heiefitu Taiaapu. All right reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

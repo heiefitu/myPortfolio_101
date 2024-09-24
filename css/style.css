@@ -1,0 +1,726 @@
+/*RESET*/
+* {
+  box-sizing: border-box; /* quand on ajoute des marges ca change pas, a faire tjrs*/
+  margin: 0; /* pour start avec 0 marges*/
+  padding: 0;
+}
+
+:root {
+  --primary-color: #176087;
+  --light-color: #f4f4f6;
+  --dark-color: #111;
+  --first-color: #0a2239;
+  --second-color: #53a2be;
+  --third-color: #1d84b5;
+  --fourth-color: #132e32;
+  --fifth-color: #176087;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none; /* take away underline (pas souligner les liens)*/
+  color: #000;
+}
+
+ul {
+  list-style: none; /* pour pas de bullet point*/
+}
+
+img {
+  max-width: 100%; /* stay contain 100%*/
+}
+
+.logo {
+  width: 120px;
+}
+
+/* ------------------------------------------------ */
+/* Nav bar*/
+.navbar {
+  background-color: #fff;
+  padding: 20px 0;
+}
+
+.navbar .container {
+  display: flex; /*flex row so they are side by side*/
+  justify-content: space-between; /*so that the blank is between the element*/
+  align-items: center;
+}
+
+.navbar .main-menu ul {
+  /* specify .main-menu so it will only affect the desktop version and not the mobile version*/
+  display: flex;
+}
+
+.navbar ul li a {
+  /* doent specify .main-menu so it will affect the desktop version and also the mobile version*/
+  padding: 10px 20px;
+  display: block;
+  font-weight: 600; /*semi bold*/
+  transition: 0.4s; /*transition for the hover color*/
+}
+
+.navbar ul li a:hover {
+  color: var(--primary-color);
+}
+
+.navbar ul li:last-child a {
+  margin-left: 15px; /* More space between Blog and log In */
+}
+/* ------------------------------------------------ */
+/* Hero */
+.hero {
+  margin-bottom: 70px;
+  margin-top: 110px;
+  min-height: 66vh;
+}
+
+.hero .container {
+  /*background: url("../assets/images/hero-bg5.png") no-repeat;*/
+  background-size: contain;
+  background-position: center top;
+  height: 500px;
+}
+
+.hero .hero-content {
+  width: 70%;
+}
+
+.hero .hero-text {
+  width: 70%;
+  margin-bottom: 20px;
+}
+
+.hero .hero-buttons {
+  margin-top: 40px;
+  margin-left: 190px;
+}
+
+/* ------------------------------------------------ */
+/* About me */
+.about-me {
+  padding: 40px 0;
+  background-color: var(--third-color);
+  min-height: 100vh;
+}
+
+.about-me .about-me-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: flat;
+}
+
+.about-me .about-me-image {
+  flex-basis: 35%;
+  width: 100%;
+  height: auto;
+}
+
+.about-me .about-me-image img {
+  border-radius: 10px;
+  max-width: 490px;
+  height: auto;
+  display: block;
+}
+
+.about-me .about-me-text-container {
+  padding-top: 40px;
+  flex-basis: 60%;
+  margin-right: 60px;
+  min-width: 500px; /* Prevent shrinking too much */
+  max-width: 100%; /* Allow full width if needed */
+}
+
+.about-me .about-me-text {
+  margin-bottom: 20px;
+}
+
+.about-me .about-me-tabs ul {
+  display: flex;
+}
+
+.about-me .about-me-tabs ul li {
+  position: relative;
+  margin-right: 60px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.about-me .about-me-tabs ul li a:hover {
+  color: var(--fifth-color);
+  transition: 0.3s;
+}
+
+.about-me .about-me-tabs ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0; /* Start with no line */
+  height: 3px;
+  background-color: var(--first-color); /* Set the line color */
+  left: 0;
+  bottom: -5px; /* Position the line just below the text */
+  transition: width 0.3s ease-out;
+}
+
+.about-me .about-me-tabs ul li a.active-tab::after {
+  width: 100%; /* Full width when active */
+}
+
+.about-me .about-me-detail-title {
+  margin-bottom: 5px;
+}
+
+.about-me .about-me-detail-list {
+  margin-bottom: 10px;
+  min-width: 300px; /* Prevent shrinking too much */
+  max-width: 100%; /* Allow full width if needed */
+}
+
+.about-me .tab-content {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out,
+    visibility 0s 0.3s;
+  position: absolute; /* Ensure the content is removed from layout when hidden */
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.about-me .active-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  position: relative; /* When visible, take up space in the layout */
+  transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out,
+    visibility 0s;
+}
+
+/* ------------------------------------------------ */
+/* My services class */
+
+.my-services {
+  padding: 40px 0;
+  min-height: 100vh;
+}
+
+.my-services .my-services-heading {
+  width: auto;
+  margin-bottom: 40px;
+}
+
+.my-services .my-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.my-services .my-services-learn-more {
+  font-style: italic;
+  font-weight: 400;
+  color: #5e5e5e;
+  font-size: 0.9rem;
+  margin-top: 50px;
+}
+.my-services .expertise-grid {
+  margin-top: 40px;
+}
+
+.service-icon img {
+  display: block;
+  margin: 0 auto; /* Center the icons horizontally */
+  width: 90px; /* Fixed width for all icons */
+  height: 90px; /* Fixed height for all icons */
+  object-fit: contain; /* Ensure icons fit without stretching */
+}
+
+.software-icons {
+  display: flex;
+  flex-direction: row;
+  width: auto; /* Fixed width for all icons */
+  height: 50px; /* Fixed height for all icons */
+  justify-content: space-evenly;
+}
+
+.my-services h4 {
+  margin-top: -10px;
+  text-align: center;
+}
+
+/* ------------------------------------------------ */
+/* My work section */
+.my-work {
+  background-color: #f45b34;
+  min-height: 100vh; /* Ensures this section takes up the full viewport height */
+  display: flex;
+  justify-content: center; /* Centers content vertically */
+}
+
+.my-work .my-work-header {
+  padding-top: 90px;
+  text-align: center;
+}
+
+.my-work .my-work-body {
+  display: flex;
+  justify-content: center; /* Centers the button horizontally */
+  height: 100%;
+  padding-top: 150px;
+}
+
+.my-work .my-work-button {
+  text-align: center;
+}
+
+.my-work .btn-special {
+  background-color: #000;
+  color: #fff;
+}
+
+.my-work .btn-special:hover {
+  background-color: #444; /* Add hover effect */
+}
+
+/* ------------------------------------------------ */
+/* Footer*/
+.footer {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer .footer-text {
+  margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.footer .footer-copyright {
+  margin-top: 100px;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  font-weight: 100;
+  font-style: italic;
+  margin-bottom: 5px;
+  color: #9898a2;
+}
+
+.footer .link-icon-tab ul {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  gap: 40px;
+}
+
+.footer .link-icon-tab li {
+  list-style: none; /* Ensures no list styles */
+}
+
+.footer .link-icon-tab a {
+  font-size: 2rem; /* Adjust size of icons as needed */
+  color: #000; /* Adjust icon color if necessary */
+}
+
+.footer .link-icon-tab a:hover {
+  color: var(--third-color); /* Changes icon color on hover */
+}
+
+/* ################################################ */
+/* ------------------------------------------------ */
+/* CONTACT*/
+
+.contact-content {
+  justify-content: center;
+  min-height: 100vh;
+}
+.contact .link-icon-tab ul {
+  display: flex;
+  justify-content: center;
+  padding-top: 150px;
+  gap: 40px;
+}
+
+.contact .link-icon-tab li {
+  list-style: none; /* Ensures no list styles */
+}
+
+.contact .link-icon-tab a {
+  font-size: 2rem; /* Adjust size of icons as needed */
+  color: #000; /* Adjust icon color if necessary */
+  transition: 0.3s;
+}
+
+.contact .link-icon-tab a:hover {
+  color: var(--third-color); /* Changes icon color on hover */
+}
+
+.contact .contact-heading {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.contact .contact-subheading {
+  font-size: 2.6rem;
+  text-align: center;
+}
+
+.contact .contact-box form {
+  max-width: 650px;
+  display: grid;
+  gap: 50px;
+  padding-top: 20px;
+  justify-content: center;
+}
+
+/* ################################################ */
+/* ----------------- M Y   W O R K ---------------- */
+/* My work Navbar */
+.navbar-work {
+  background-color: #fff;
+  padding: 20px 0;
+}
+
+.navbar-work .container {
+  display: flex; /*flex row so they are side by side*/
+  justify-content: space-between; /*so that the blank is between the element*/
+  align-items: center;
+}
+
+.navbar-work .main-menu ul {
+  /* specify .main-menu so it will only affect the desktop version and not the mobile version*/
+  display: flex;
+}
+
+.navbar-work ul li a {
+  /* doent specify .main-menu so it will affect the desktop version and also the mobile version*/
+  padding: 10px 20px;
+  display: block;
+  font-weight: 600; /*semi bold*/
+  transition: 0.4s; /*transition for the hover color*/
+}
+
+.navbar-work ul li a:hover {
+  color: var(--primary-color);
+}
+
+.navbar-work ul li:last-child a {
+  margin-left: 15px; /* More space between Blog and log In */
+}
+
+/* ------------------------------------------------ */
+/* Details work*/
+.details {
+  padding: 10px 20px;
+}
+
+.details .content-1 h2 {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  font-weight: 600;
+  margin: 30px 0 20px;
+}
+/* ################################################ */
+/* ------------------------------------------------ */
+/* Utility classes*/
+.container {
+  max-width: 1100px;
+  margin: 0 auto; /* top and bottom 0 but left and right be auto in middle*/
+  padding: 0 30px; /* top and bottom 0 but left and right be 15px*/
+}
+
+.container-sm {
+  max-width: 800px;
+  margin: 0 auto; /* top and bottom 0 but left and right be auto in middle*/
+  padding: 0 15px; /* top and bottom 0 but left and right be 15px*/
+}
+
+.container-lg {
+  max-width: 1400px;
+  margin: 0 auto; /* top and bottom 0 but left and right be auto in middle*/
+  padding: 0 10px; /* top and bottom 0 but left and right be 15px*/
+}
+/* ------------------------------------------------ */
+/* Card */
+.card {
+  background: #f3f3f3;
+  color: #000;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.card h3 {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  min-height: 60px; /* Ensure consistent height for titles */
+}
+
+.card p {
+  flex-grow: 1; /* Make paragraph take up available space */
+  margin-bottom: 30px; /* Space for Learn More */
+  text-align: center;
+  font-size: 1rem;
+}
+
+.card h6 {
+  padding-top: 10px; /* Space for Learn More */
+  text-align: center;
+  font-size: 1rem;
+}
+/* ------------------------------------------------ */
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 13px 20px;
+  background: var(--light-color);
+  color: #333;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.btn-special {
+  border-radius: 15px 0 15px 0;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.btn-dark {
+  background: var(--dark-color);
+  color: #fff; /*color of the text*/
+}
+
+.btn-block {
+  /*if we want the button to be all across the page*/
+  display: block;
+  width: 100%;
+}
+
+/* ------------------------------------------------ */
+/* Text Classes */
+.text-xxl {
+  font-size: 3.2rem;
+  line-height: 1.2;
+  font-weight: normal;
+  margin: 30px 0 10px;
+}
+
+.text-xl {
+  font-size: 1.9rem;
+  line-height: 1.4;
+  font-weight: 600;
+  margin: 10px 0 20px;
+  color: #1d84b5;
+}
+
+.text-lg {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 30px 0 20px;
+}
+
+.text-md {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 20px 0 10px;
+}
+
+.text-sm {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 10px 0 5px;
+}
+
+.text-icon {
+  font-size: 1.3rem;
+  line-height: 1.4;
+  font-weight: 600;
+  margin: 10px 0 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-italic-md {
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: normal;
+  font-style: italic;
+  margin: 20px 0 10px;
+}
+/* ------------------------------------------------ */
+/* Background */
+.bg-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.bg-light {
+  background: var(--light-color);
+  color: #333;
+}
+
+.bg-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+
+.bg-black {
+  background: #000;
+  color: #fff;
+}
+
+/* ################################################ */
+
+/* ------------------------------------------------ */
+/* Hamburger Button*/
+.hamburger-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.hamburger-button .hamburger-line {
+  width: 30px;
+  height: 3px;
+  background: #333;
+  margin: 6px 0;
+}
+
+/* ------------------------------------------------ */
+/* Mobile menu*/
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 250px;
+  height: 100%;
+  z-index: 100;
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-menu ul {
+  margin-top: 100px;
+  padding-right: 10px;
+}
+
+.mobile-menu ul li {
+  margin: 10px 0;
+}
+
+.mobile-menu ul li a {
+  font-size: 20px;
+  transition: 0.3s;
+}
+/* ------------------------------------------------ */
+/* Media Queries*/
+/* allow to add specifics CSS to specifics devices or different ranges of screen sizes*/
+
+/*only show below the specified width */
+@media (max-width: 960px) {
+  .text-xxl {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 670px) {
+  .navbar .main-menu {
+    display: none;
+  }
+
+  .navbar .hamburger-button {
+    display: block;
+  }
+
+  .hero .container {
+    background: url("../images/hero-bg-mobile.png") no-repeat;
+    background-size: 350px;
+    background-position: bottom;
+    height: 770px;
+  }
+
+  .hero .hero-content,
+  .hero .hero-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero .hero-buttons .btn {
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+  }
+
+  /* Testimonials */
+  .testimonials .testimonials-heading {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .testimonials .testimonials-grid,
+  .pricing .pricing-grid,
+  .footer .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer .footer-grid > div {
+    text-align: center;
+  }
+
+  /* Text */
+  .text-xl {
+    font-size: 1.9rem;
+  }
+
+  .text-lg {
+    font-size: 1.5rem;
+  }
+
+  .text-md {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .text-xxl {
+    font-size: 2rem;
+  }
+}
