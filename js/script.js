@@ -1,3 +1,6 @@
+// Init all variables
+const navbar = document.querySelector(".navbar");
+
 // Mobile menu
 document.addEventListener("DOMContentLoaded", () => {
   const hamburgerButton = document.querySelector(".hamburger-button");
@@ -68,3 +71,17 @@ function setActiveTab(activeElement) {
   // Add active class to the clicked tab
   activeElement.classList.add("active-tab");
 }
+
+if (window.scrollY === 0) {
+  navbar.classList.add('top-reached');
+}
+
+// Top reached manager
+window.addEventListener("scroll", () => {
+
+  if (window.scrollY === 0) {
+    navbar.classList.add('top-reached');
+  } else {
+    navbar.classList.remove('top-reached');
+  }
+});

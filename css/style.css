@@ -28,6 +28,7 @@ body {
   line-height: 1.5;
   background: #fff;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -50,11 +51,49 @@ img {
   width: 120px;
 }
 
+.logo svg {
+  width: 100%;
+  height: max-content;
+}
+
 /* ------------------------------------------------ */
 /* Nav bar*/
 .navbar {
+  padding: 10px 0;
+  width: 100%;
+  z-index: 5;
+  background-color: var(--primary-color);
+  position: fixed;
+  top: 0;
+}
+
+.navbar a {
+  color: var(--light-color);
+}
+
+.navbar ul li a:not(.btn):hover {
+  color: var(--light-color) !important;
+  opacity: 0.5 !important;
+}
+
+.navbar a.btn {
+  color: var(--dark-color);
+}
+
+.navbar svg path {
+  fill: var(--light-color);
+}
+
+.navbar.top-reached {
   background-color: #fff;
-  padding: 20px 0;
+}
+
+.navbar.top-reached svg path {
+  fill: var(--dark-color);
+}
+
+.navbar.top-reached a {
+  color: var(--dark-color);
 }
 
 .navbar .container {
@@ -92,13 +131,16 @@ img {
 /* ------------------------------------------------ */
 /* Hero */
 .hero {
-  margin-bottom: 70px;
-  margin-top: 110px;
-  min-height: 66vh;
+  margin: 0 200px 0 200px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .hero .container {
   /*background: url("../assets/images/hero-bg5.png") no-repeat;*/
+  display: flex;
+  align-items: center;
   background-size: contain;
   background-position: center top;
   height: 500px;
@@ -122,6 +164,8 @@ img {
 /* About me */
 .about-me {
   padding: 40px 0;
+  display: flex;
+  align-items: center;
   background-color: var(--third-color);
   min-height: 100vh;
 }
@@ -155,6 +199,17 @@ img {
   /* Allow full width if needed */
 }
 
+.about-me h1 {
+  font-weight: bold;
+}
+
+.about-me h1,
+.about-me p,
+.about-me a,
+.about-me h3 {
+  color: var(--light-color);
+}
+
 .about-me .about-me-text {
   margin-bottom: 20px;
 }
@@ -171,8 +226,23 @@ img {
 }
 
 .about-me .about-me-tabs ul li a:hover {
-  color: var(--fifth-color);
+  color: var(--light-color);
   transition: 0.3s;
+  opacity: 0.7;
+}
+
+.about-me .about-me-tabs ul li a:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  /* Start with no line */
+  height: 3px;
+  background-color: var(--light-color);
+  /* Set the line color */
+  left: 0;
+  bottom: -5px;
+  /* Position the line just below the text */
+  transition: width 0.3s ease-out;
 }
 
 .about-me .about-me-tabs ul li a::after {
@@ -181,7 +251,7 @@ img {
   width: 0;
   /* Start with no line */
   height: 3px;
-  background-color: var(--first-color);
+  background-color: var(--light-color);
   /* Set the line color */
   left: 0;
   bottom: -5px;
@@ -235,6 +305,12 @@ img {
 .my-services {
   padding: 40px 0;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.my-services .container {
+  padding-top: 10px;
 }
 
 .my-services .my-services-heading {
@@ -295,6 +371,7 @@ img {
   /* Ensures this section takes up the full viewport height */
   display: flex;
   justify-content: center;
+  align-items: center;
   /* Centers content vertically */
 }
 
